@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- less  -->
   <link rel="stylesheet/less" href="bootstrap/less/styles.less" media="all"/>
-    <!-- fonts -->
+  <!-- fonts -->
   <link href='http://fonts.googleapis.com/css?family=Poiret+One|Lobster+Two|Raleway' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
 
@@ -16,6 +16,9 @@
   <!-- animate css -->
   <link rel="stylesheet" href="bootstrap/dist/css/animate.css">
   <script src="bootstrap/dist/js/less.min.js"></script>
+  <!-- d3 -->
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
 </head>
 <body>
   <!-- sidebar -->
@@ -30,7 +33,7 @@
       <li><a href="#section5">Contact</a></li>
     </ul>
   </div>
-<!-- beginning of site content -->
+  <!-- beginning of site content -->
   <div id="wrapper" class="wrap">
     <!-- trigger for menu push -->
     <span class="nav_trigger">
@@ -44,133 +47,115 @@
     <!-- Biography -->
 
     <div class="container" id="section2">
-  <div class="row panel">
-    <div class="col-md-4 bg_blur ">
-    </div>
+      <div class="row panel">
+        <div class="col-md-4 bg_blur ">
+        </div>
         <div class="col-md-8  col-xs-12">
 
-           <img class="img-thumbnail visible-xs picture_mob" />
-           <div class="header">
-                <h1 id="script">Hi! I'm Nichole</h1>
-                <span id="general">Thundercats organic meditation flannel hella. Single-origin coffee disrupt tote bag, gentrify authentic tofu whatever 3 wolf moon. Whatever dreamcatcher actually, wayfarers umami readymade tote bag tousled flexitarian you probably haven't heard of them. IPhone authentic Portland, mlkshk messenger bag actually heirloom hoodie PBR pop-up Tumblr twee organic ugh. Cliche butcher Kickstarter wolf VHS 90's. Slow-carb whatever Pinterest, lo-fi Schlitz gentrify narwhal chia sriracha selfies twee fanny pack PBR.</span>
-           </div>
+         <img class="img-thumbnail visible-xs picture_mob" />
+         <div class="header">
+          <h1 id="script">Hi! I'm Nichole</h1>
+          <span id="general">Thundercats organic meditation flannel hella. Single-origin coffee disrupt tote bag, gentrify authentic tofu whatever 3 wolf moon. Whatever dreamcatcher actually, wayfarers umami readymade tote bag tousled flexitarian you probably haven't heard of them. IPhone authentic Portland, mlkshk messenger bag actually heirloom hoodie PBR pop-up Tumblr twee organic ugh. Cliche butcher Kickstarter wolf VHS 90's. Slow-carb whatever Pinterest, lo-fi Schlitz gentrify narwhal chia sriracha selfies twee fanny pack PBR.</span>
         </div>
+      </div>
     </div>
 
 
-</div>
-
-
-    <!-- Skills -->
-    <div class="container info" id="skills">
-
-<dl class="skills-diagram">
-  <dt class="skill-5">UNIX</dt>
-  <dd>5</dd>
-  <dt class="skill-10">Ruby</dt>
-  <dd>10</dd>
-  <dt class="skill-3">Ajax</dt>
-  <dd>3</dd>
-  <dt class="skill-8">Jquery</dt>
-  <dd>8</dd>
-  <dt class="skill-4">Jasmine</dt>
-  <dd>4</dd>
-  <dt class="skill-6">HTML5</dt>
-  <dd>6</dd>
-  <dt class="skill-7">JavaScript</dt>
-  <dd>7</dd>
-  <dt class="skill-9">CSS3</dt>
-  <dd>9</dd>
-  <dt class="skill-3">Rspec</dt>
-  <dd>2</dd>
-  <dt class="skill-3">Birds</dt>
-  <dd>12</dd>
-</dl>
-
-  </div> <!-- /container -->
-
-
-<!-- codepen skills -->
-
-
-  <!-- Portfolio -->
-    <div class="divider"></div>
-
-    <div class="divider" id="section2"></div>
-
-
-
-    <div class="divider"></div>
-
-    <div class="divider" id="section3"></div>
-
-    <div class="bg-4">
-      <div class="container">
-        <div class="row">
-         <div class="col-sm-4 col-xs-6">
-
-          <div class="panel panel-default">
-            <div class="panel-thumbnail"><a href="#"><img src="//placehold.it/600x400/444/F8F8F8" class="img-responsive"></a></div>
-            <div class="panel-body">
-              <p>University Crime Watch</p>
-              <p></p>
-
-            </div>
-          </div><!--/panel-->
-        </div><!--/col-->
-
-        <div class="col-sm-4 col-xs-6">
-
-          <div class="panel panel-default">
-            <div class="panel-thumbnail"><a href="#"><img src="//placehold.it/600x400/454545/FFF" class="img-responsive"></a></div>
-            <div class="panel-body">
-              <p>Goodreads</p>
-              <p></p>
-
-            </div>
-          </div><!--/panel-->
-        </div><!--/col-->
-
-        <div class="col-sm-4 col-xs-6">
-
-          <div class="panel panel-default">
-            <div class="panel-thumbnail"><a href="#" title="Interiors"><img src="//placehold.it/600x400/555/F2F2F2" class="img-responsive"></a></div>
-            <div class="panel-body">
-              <p>See The Need</p>
-              <p></p>
-
-            </div>
-          </div><!--/panel-->
-
-        </div><!--/col-->
-
-
-
-      </div><!--/row-->
-    </div><!--/container-->
   </div>
 
 
-  <!-- foooter with contact  -->
-  <div class="container">
-  <hr>
-        <div class="text-center center-block">
-              <a href="#"><i id ="social" class="fa fa-pinterest-square fa-3x"></i></a>
-              <a href="https://twitter.com/bootsnipp"><i id="social" class="fa fa-twitter-square fa-3x social-tw"></i></a>
-              <a href="https://plus.google.com/+Bootsnipp-page"><i id="social" class="fa fa-google-plus-square fa-3x social-gp"></i></a>
-              <a href="mailto:bootsnipp@gmail.com"><i id="social" class="fa fa-envelope-square fa-3x social-em"></i></a>
+  <!-- Skills -->
+  <div class="row">
+    <div id="pie_chart"></div>
+  </div>
+
+
+
+  <!-- Portfolio -->
+  <div class="divider"></div>
+
+  <div class="divider" id="section2"></div>
+
+
+
+  <div class="divider"></div>
+
+  <div class="divider" id="section3"></div>
+
+  <div class="bg-4">
+    <div class="container">
+      <div class="row">
+       <div class="col-sm-4 col-xs-6">
+
+        <div class="panel panel-default">
+          <div class="panel-thumbnail"><a href="#"><img src="//placehold.it/600x400/444/F8F8F8" class="img-responsive"></a></div>
+          <div class="panel-body">
+            <p>University Crime Watch</p>
+            <p></p>
+
+          </div>
+        </div><!--/panel-->
+      </div><!--/col-->
+
+      <div class="col-sm-4 col-xs-6">
+
+        <div class="panel panel-default">
+          <div class="panel-thumbnail"><a href="#"><img src="//placehold.it/600x400/454545/FFF" class="img-responsive"></a></div>
+          <div class="panel-body">
+            <p>Goodreads</p>
+            <p></p>
+
+          </div>
+        </div><!--/panel-->
+      </div><!--/col-->
+
+      <div class="col-sm-4 col-xs-6">
+
+        <div class="panel panel-default">
+          <div class="panel-thumbnail"><a href="#" title="Interiors"><img src="//placehold.it/600x400/555/F2F2F2" class="img-responsive"></a></div>
+          <div class="panel-body">
+            <p>See The Need</p>
+            <p></p>
+
+          </div>
+        </div><!--/panel-->
+
+      </div><!--/col-->
+
+
+
+    </div><!--/row-->
+  </div><!--/container-->
 </div>
-    <hr>
+
+
+<!-- foooter with contact  -->
+<div class="container">
+  <hr>
+  <div class="text-center center-block">
+    <a href="#"><i id ="social" class="fa fa-pinterest-square fa-3x"></i></a>
+    <a href="https://twitter.com/bootsnipp"><i id="social" class="fa fa-twitter-square fa-3x social-tw"></i></a>
+    <a href="https://plus.google.com/+Bootsnipp-page"><i id="social" class="fa fa-google-plus-square fa-3x social-gp"></i></a>
+    <a href="mailto:bootsnipp@gmail.com"><i id="social" class="fa fa-envelope-square fa-3x social-em"></i></a>
+  </div>
+  <hr>
 </div>
 </div> <!-- /wrap -->
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://code.jquery.com/jquery.js"></script>
-      <!-- Include all compiled plugins (below), or include individual files
-      as needed -->
-      <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-      <script src="bootstrap/js/nav.js"></script>
-      <script src="boostrap/js/skills.js"></script>
-    </body>
-    </html>
+<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bootstrap/js/nav.js"></script>
+<!-- skills chart  -->
+<script type="text/csv" id="csv">age,population
+Rspec,5.67
+Javascript,10.94
+JQuery,7.49
+SQL Database,9.56
+Rails,17.94
+Ruby,24.33
+PHP,8.87</script>
+<script src="bootstrap/js/skills.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>

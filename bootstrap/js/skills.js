@@ -1,44 +1,43 @@
-$(document).ready(function () {
-  function hex_initial_animation() {
-    $(".hex-wrap,.hover-notify").velocity("transition.expandIn", { stagger: 150 });
-    $(".hex-wrap").velocity("callout.pulse");
-    $(".hoverblock").velocity("fadeOut", { delay: 3000, duration: 0 });
-    }
-  hex_initial_animation();
+var width = 600,
+    height = 500,
+    radius = Math.min(width, height) / 2;
 
-var hoverdetect = setInterval(function(){ hovernotify() }, 3000);
-function hovernotify() {
-    $(".hover-notify").velocity("callout.tada");
-}
-function myStopFunction() {
-$(".hover-notify").velocity('stop', true).velocity("fadeOut");
-    clearInterval(hoverdetect);
-}
+var color = d3.scale.ordinal()
+    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
 
-    $(".hex-init").mouseenter(function () {
+var arc = d3.svg.arc()
+    .outerRadius(radius - 10)
+    //.innerRadius(radius - 70);
+    .innerRadius(0);
 
-      myStopFunction();
+var pie = d3.layout.pie()
+    .value(function(d) { return d.population; });
 
-      var title_color =  $(this).parent().attr("data-color");
-      var title_name = $(this).parent().attr("data-title");
-      var desc_name = $(this).parent().attr("data-content");
+var svg = d3.select("#pie_chart").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+  .append("g")
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-        function hex_description() {
-          $('.code-description').velocity('stop', true).velocity("transition.slideRightBigIn");
-          $('.' + desc_name).siblings().removeClass('desc-active');
-            setTimeout(function() {
-              $('.' + desc_name).addClass('desc-active');
-              $('.code-descriptopn > div, .desc-active').children().velocity('stop', true).velocity("transition.slideRightBigIn", { stagger: 300 });
-              $('.code-title, .desc-active span').velocity({color: title_color}, { queue: false });
-              $('.code-title').text(title_name)
-            }, 0);
-          }
-          hex_description();
+var data = d3.csv.parse(d3.select("#csv").text());
 
-        $(this).parent().addClass('hexactive');
-        $('.hexactive').velocity({scaleX:"1.1",scaleY:"1.1"}, { duration: 200 });
+  data.forEach(function(d) {
+    d.population = +d.population;
+  });
 
-      }).mouseleave(function () {
-         $('.hexactive').velocity('stop', true).velocity('reverse').removeClass('hexactive');
-      });
-});
+  var g = svg.selectAll(".arc")
+      .data(pie(data))
+    .enter().append("g")
+      .attr("class", "arc");
+
+  g.append("path")
+      .attr("d", arc)
+      .style("fill", function(d) {
+        console.log(d);
+        return color(d.data.age); });
+
+  g.append("text")
+      .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+      .attr("dy", ".35em")
+      .style("text-anchor", "middle")
+      .text(function(d) { return d.data.age; });
