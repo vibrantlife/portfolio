@@ -11,17 +11,26 @@
 @scriptfont: 'Lobster Two', Helvetica, sans-serif;
 @generalfont: 'Raleway', sans-serif;
 
+/*skills section*/
+h2 {
+  font-family: @generalfont;
+  color: @concrete;
+  text-align: center;
+}
+
+/*section 1 banner*/
+
 #header {
   font-family: @thinfont;
   text-align: center;
   font-size: 104px;
 }
 
-#general {
+#bio {
   font-family: @generalfont;
 }
 
-#script {
+#banner_description_text {
   font-family: @scriptfont;
   text-align: center;
   font-size: 62px;
@@ -305,3 +314,13 @@ body.show_sidebar #wrapper {
     .social-em:hover {
       color: #f39c12;
     }
+
+
+/*section 3 - skills*/
+#pie_chart {
+  position: relative;
+left: 75%;
+-webkit-transform: translateX(-50%);
+-ms-transform: translateX(-50%);
+transform: translateX(-50%);
+}
