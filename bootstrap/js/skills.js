@@ -33,7 +33,7 @@ var data = d3.csv.parse(d3.select("#csv").text());
   g.append("path")
       .attr("d", arc)
       .style("fill", function(d) {
-        console.log(d);
+        // console.log(d);
         return color(d.data.age); });
 
   g.append("text")
