@@ -20,7 +20,7 @@ body {
 }
 
 h1 {
-    font-family: @scriptfont;
+  font-family: @scriptfont;
   color: @asbestos;
   text-align: center;
 
@@ -38,17 +38,19 @@ h4 {
   font-family: @generalfont;
 }
 
+
+
 /*section 1 banner*/
 
 #header {
-  font-family: @thinfont;
+  font-family: @scriptfont;
   text-align: center;
   font-size: 104px;
-  color: @asphault;
+  color: @white;
 }
 
 #banner_description_text {
-  font-family: @scriptfont;
+  font-family: @thinfont;
   text-align: center;
   font-size: 62px;
 }
@@ -67,6 +69,50 @@ background: linear-gradient(135deg, rgba(252,236,252,1) 0%, rgba(26,188,156,1) 0
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcecfc', endColorstr='#9b59b6', GradientType=1 );
 }
 
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.list-inline li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-bottom: 10px;
+}
+
+.social-icons.icon-circle .fa{
+  border-radius: 50%;
+}
+
+.social-icons.icon-rotate .fa:hover, .social-icons.icon-rotate .fa:active {
+  -webkit-transform: scale(1.1) rotate(360deg);
+  -moz-transform: scale(1.1) rotate(360deg);
+  -ms-transform: scale(1.1) rotate(360deg);
+  -o-transform: scale(1.1) rotate(360deg);
+  transform: scale(1.1) rotate(360deg);
+}
+
+.social-icons .fa {
+  /*font-size: 1.8em;*/
+}
+/*Change icons circle size and color here*/
+.social-icons .fa {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #FFF;
+  color: rgba(255, 255, 255, 0.8);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icons.icon-circle .fa{
+  border-radius: 50%;
+  }
 
 .bluetext {
   color: @turquoise;
@@ -74,6 +120,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcecfc', end
 
 .yellowtext {
   color: @yellow;
+}
+
+.asphault {
+  color: @asphault;
 }
 
 /*section 2 bio*/
@@ -206,7 +256,7 @@ body.show_sidebar #wrapper {
   display: block;
   font: 24px @generalfont;
   background: @belize;
-  color: @midnightblue;
+  color: @white;
   text-decoration: none;
 }
 
@@ -254,7 +304,3 @@ body.show_sidebar #wrapper {
     .social-em:hover {
       color: #f39c12;
     }
-
-
-
-
