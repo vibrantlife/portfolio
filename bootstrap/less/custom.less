@@ -136,21 +136,28 @@ h3, h4 {
   font-family: @scriptfont;
 }
 
-#bio_text {
+.circle_shape #bio_text {
   font-family: @generalfont;
   color: @asbestos;
+  line-height: 2;
+  text-align: justify;
+
 }
 
 .panel {
   background-color: @white;
 }
 
-.bg_blur
+.circle_shape .bio_pic
 {
+  shape-outside: circle();
+  float: left;
   background-image:url('../dist/imgs/hawaiijumping.jpg');
   height: 300px;
+  margin: 5.5rem;
   background-size: cover;
-  border-radius: 25%;
+  border-radius: 50%;
+  -webkit-shape-outside: circle();
 }
 
 .bio_header{
