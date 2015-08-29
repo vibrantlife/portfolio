@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +11,9 @@
 
   <!-- font awesome menu symbol -->
   <link rel='stylesheet' href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- font for programming languages -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/89f2f44ba07ea3fff7e561c2142813b278c2d6c6/devicon.min.css">
+
   <!-- animate css -->
   <link rel="stylesheet" href="bootstrap/dist/css/animate.css">
   <script src="bootstrap/dist/js/less.min.js"></script>
@@ -36,6 +37,7 @@
 
 <!-- beginning of site content -->
 <div id="wrapper">
+
   <div class="container-fluid banner page-section" id="home">
     <!-- trigger for menu push -->
     <div class="nav_trigger">
@@ -69,7 +71,7 @@
   <div class="page-section" id="bio"></div>
     <!-- Biography -->
   <div class="container bio">
-    <div class="row panel circle_shape">
+    <div class="row circle_shape">
       <div class="col-md-4 bg_blur bio_pic "></div> <!-- pic -->
          <div class="bio_header">
           <h1 id="bio_header">Hey there, I'm Nichole</h1>
@@ -84,11 +86,45 @@
 
   <!-- Skills -->
   <div class="container skills">
-  <div class="row panel">
-    <h1>Skills</h1>
-    <h4>To see all of my skills and experience check out my LinkedIn Profile <a href="http://linkedin.com/in/nicholeshelton" target="_blank"><i  class="fa fa-linkedin-square fa-1x"></i></a></h4>
-    <div id="pie_chart"></div> <!-- d3 -->
-  </div> <!-- /row -->
+      <div class="row">
+        <h1>Skills</h1>
+        <h4>To see all of my skills and experience check out my LinkedIn Profile <a href="http://linkedin.com/in/nicholeshelton" target="_blank"><i  class="fa fa-linkedin-square fa-1x"></i></a></h4>
+      </div> <!-- /row -->
+      <div class="row">
+          <div class="col-md-2">
+              <i class="devicon-css3-plain-wordmark"></i>
+          </div>
+          <div class="col-md-2">
+              <i class="devicon-html5-plain-wordmark"></i>
+          </div>
+          <div class="col-md-2">
+              <i class="devicon-jquery-plain-wordmark"></i>
+          </div>
+          <div class="col-md-2">
+              <i class="devicon-less-plain-wordmark"></i>
+          </div>
+          <div class="col-md-2">
+              <i class="devicon-sass-original"></i>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-md-2">
+              <i class="devicon-javascript-plain"></i>
+          </div>
+          <div class="col-md-2">
+              <i class="devicon-ruby-plain-wordmark"></i>
+          </div>
+          <div class="col-md-2">
+              <i class="devicon-rails-plain-wordmark"></i>
+          </div>
+          <div class="col-md-2">
+              <i class="devicon-drupal-plain-wordmark"></i>
+          </div>
+          <div class="col-md-2">
+              <i class="devicon-wordpress-plain-wordmark"></i>
+          </div>
+      </div>
   </div> <!-- /section3 -->
 
 
@@ -96,6 +132,7 @@
   <!-- Portfolio -->
   <div class="divider" id="section_space"></div>
   <div class="page-section" id="portfolio"></div>
+    <h1>Portfolio</h1>
 <!-- first row 2 items -->
   <div class="container target">
       <div class="row">
@@ -170,17 +207,5 @@
 <script src="bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="bootstrap/js/nav.js"></script>
 <!-- skills chart  -->
-<script type="text/csv" id="csv">age,population
-Rspec, 8.67
-Javascript, 10.94
-JQuery, 10.49
-HTML5, 20
-CSS3, 20
-SQL Database, 9.56
-Rails, 15.94
-Ruby, 20.33
-D3.js, 6.8
-PHP, 5.87</script>
-<script src="bootstrap/js/skills.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

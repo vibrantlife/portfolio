@@ -63,16 +63,11 @@ h3, h4 {
 }
 
 .banner {
-  margin-top: 0px;
-  height: 100vh;
-  width: 100%;
-  color: @white;
-  display: block;
-  background: rgba(252,236,252,1);
-  background: -webkit-linear-gradient(bottom left, rgba(252,236,252,1) 0%, rgba(26,188,156,1) 0%, rgba(45,162,201,1) 30%, rgba(52,152,219,1) 42%, rgba(135,101,189,1) 71%, rgba(155,89,182,1) 78%);
-  background: -o-linear-gradient(bottom left, rgba(252,236,252,1) 0%, rgba(26,188,156,1) 0%, rgba(45,162,201,1) 30%, rgba(52,152,219,1) 42%, rgba(135,101,189,1) 71%, rgba(155,89,182,1) 78%);
-  background: linear-gradient(to top right, rgba(252,236,252,1) 0%, rgba(26,188,156,1) 0%, rgba(45,162,201,1) 30%, rgba(52,152,219,1) 42%, rgba(135,101,189,1) 71%, rgba(155,89,182,1) 78%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcecfc', endColorstr='#9b59b6', GradientType=1 );
+    background: url('../dist/imgs/baybridge.jpeg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-bacground-size: cover;
+    background-size: cover;
 }
 
 .list-unstyled {
@@ -178,14 +173,8 @@ h3, h4 {
 }
 
 /*section 3 - skills*/
-#pie_chart {
-  position: relative;
-  height: 100vh;
-  left: 75%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  color: @asbestos;
+.skills {
+    font-size: 100px;
 }
 
 /*sidebar */
@@ -280,4 +269,3 @@ body.show_sidebar #wrapper {
   text-align: center;
   margin-left: 5px;
 }
-
