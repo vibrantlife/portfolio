@@ -46,12 +46,41 @@ h3, h4 {
   font-family: @generalfont;
 }
 
+.fa {
+    color: @turquoise;
+}
+
 
 #section_space {
   margin-top: 50px;
 }
 
+// opaque navbar
+.opaque-navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 50px;
+    border-bottom: 0px;
+}
 
+.opaque-navbar .opaque {
+    background-color: black;
+    height: 50px;
+    transition: background-color .5s ease 0s;
+}
+
+ul.dropdown-menu {
+    background-color: black;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    font-size: 20px;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
 /*section 1 banner*/
 
 #header {
@@ -159,8 +188,7 @@ h3, h4 {
   height: 50px;
   line-height: 50px;
   text-align: center;
-  color: #FFF;
-  color: rgba(255, 255, 255, 0.8);
+  color: @turquoise;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -172,18 +200,6 @@ h3, h4 {
   border-radius: 50%;
   }
 
-.bluetext {
-  color: @turquoise;
-}
-
-.yellowtext {
-  color: @yellow;
-}
-
-.asphault {
-  color: @asphault;
-}
-
 /*section 2 bio*/
 
 #bio nav > ul {
@@ -194,7 +210,6 @@ h3, h4 {
     font-size: 1.9em;
     display: inline-block;
     height: 40px;
-    border-radius: 15px;
     line-height: 40px;
     padding: 0 20px;
     margin: 0 10px 0 0;
@@ -202,9 +217,11 @@ h3, h4 {
     transition: all .3s linear 0s;
 }
 
+
+
 #bio nav > ul >li.active, #bio nav > ul >li:hover {
-    color: @white;
-    background: @turquoise;
+    color: @gray;
+    border-bottom: 5px solid @turquoise;
 }
 
 .hidden {
@@ -242,6 +259,7 @@ h3, h4 {
 
 div.row.circle_shape {
     position: absolute;
+    top: 15%;
 }
 
 .panel {
@@ -250,22 +268,20 @@ div.row.circle_shape {
 
 .circle_shape .bio_pic
 {
-  shape-outside: circle();
+  // shape-outside: circle();
   float: left;
   background-image:url('../dist/imgs/hawaiijumping.jpg');
   height: 350px;
   margin: 5rem;
   background-size: cover;
   border-radius: 50%;
-  -webkit-shape-outside: circle();
+  // -webkit-shape-outside: circle();
   position: relative;
   top: 30px;
 }
 
 .bio_header{
   color : #808080;
-  // margin-left:10%;
-  // margin-top:70px;
 }
 
 .picture_mob{
@@ -275,6 +291,9 @@ div.row.circle_shape {
   bottom: 70%;
 }
 
+[class^=devicon-] {
+    color: @turquoise;
+}
 
 
 
