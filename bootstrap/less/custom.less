@@ -16,8 +16,14 @@
 /*entire doc*/
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 html {
     overflow-x: hidden;
 }
@@ -25,6 +31,12 @@ body {
   color: @asbestos;
   background-color: @white;
   font-family: @generalfont
+}
+
+#wrapper {
+    min-height: 100%;
+    position: relative;
+    // margin-bottom: -100px;
 }
 
 h1 {
@@ -51,10 +63,6 @@ h3, h4 {
 }
 
 
-#section_space {
-  margin-top: 50px;
-}
-
 // opaque navbar
 .opaque-navbar {
     background-color: rgba(0, 0, 0, 0.5);
@@ -76,10 +84,25 @@ ul.dropdown-menu {
     display: inline-block;
     float: none;
     font-size: 20px;
+    margin: 0;
 }
 
-.navbar .navbar-collapse {
+.navbar{
     text-align: center;
+}
+
+.navbar-fixed-top {
+    position: fixed;
+    right: 120px;
+    width: 100%;
+    height: auto;
+}
+
+.navbar-nav > li.open > ul.dropdown-menu {
+  position: absolute;
+  border: 1px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 }
 /*section 1 banner*/
 
@@ -202,11 +225,11 @@ ul.dropdown-menu {
 
 /*section 2 bio*/
 
-#bio nav > ul {
+.bio nav > ul {
     text-align: center;
 }
 
-#bio nav > ul >li {
+.bio nav > ul >li {
     font-size: 1.9em;
     display: inline-block;
     height: 40px;
@@ -218,8 +241,7 @@ ul.dropdown-menu {
 }
 
 
-
-#bio nav > ul >li.active, #bio nav > ul >li:hover {
+.bio nav > ul >li.active, .bio nav > ul >li:hover {
     color: @gray;
     border-bottom: 5px solid @turquoise;
 }
@@ -231,8 +253,11 @@ ul.dropdown-menu {
 
 .bio {
     height: 100vh;
-    margin-top: 100px;
+    width: 80%;
+    padding: 0 20px;
+    margin: 100px 0;
     position: relative;
+    top: 70px;
 }
 #bio_header {
   font-family: @scriptfont;
@@ -254,9 +279,11 @@ ul.dropdown-menu {
     background: url('../dist/imgs/hawaiijumping.jpg') center center no-repeat;
     background-size: cover;
     float: left;
-    height: 350px;
-    width: 350px;
+    height: 450px;
+    width: 450px;
     border-radius: 50%;
+    shape-outside: circle();
+    margin: 15px;
 }
 
 
@@ -272,6 +299,8 @@ ul.dropdown-menu {
 }
 
 
+
 [class^=devicon-] {
     color: @turquoise;
+    font-size: 4em;
 }

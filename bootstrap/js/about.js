@@ -1,9 +1,9 @@
-$('#bio nav li').click(function(){
+$('.bio nav li').click(function(){
     $('li').removeClass('active');
     $(this).addClass('active');
 });
 
-$('#bio nav li').on('click', function(event){
+$('.bio nav li').on('click', function(event){
     event.preventDefault();
     var content = $(this).data();
     var contentIds = ['#skills','#contact','#about'];
@@ -11,4 +11,4 @@ $('#bio nav li').on('click', function(event){
         $(contentIds[contentName]).addClass('hidden');
     }
     $('#' + content.id).removeClass('hidden');
-})
+});

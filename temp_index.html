@@ -22,15 +22,12 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top opaque-navbar">
+<div id="wrapper">
+    <!-- navbar -->
+    <div class="navbar navbar-inverse nav-links navbar-fixed-top opaque-navbar" role="navbigation">
         <div class="container">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navMain">
-                <span class='glyphicon glyphicon-chevront-right' style="color:white;"></span>
-            </button>
-        </div>
-        <div class="collapse navbar-collapse" id="navMain">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#" class="scroll-link" data-id="home"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="#" class="scroll-link" data-id="home"><i class="fa fa-home"></i> Home</a></li>
                 <li><a href="#" class="scroll-link" data-id="bio">Bio</a></li>
                 <li><a href="#" class="scroll-link" data-id="portfolio">Portfolio</a></li>
             </ul>
@@ -40,8 +37,14 @@
 
 
 
+
+
+
+
+
+
+
 <!-- beginning of site content -->
-<div id="wrapper">
 
   <div class="container-fluid banner page-section" id="home">
     <!-- header  -->
@@ -54,7 +57,8 @@
 <!-- social media icons -->
 
     <!-- Biography -->
-  <div class="container bio page-section" id="bio">
+    <div id="bio"></div>
+  <div class="container bio">
       <div class="bio-pic"></div>
     <div class="row">
          <div class="bio_header">
@@ -83,10 +87,6 @@
                      </ul>
                    </div> <!-- text center block -->
                  </div>
-
-
-
-
 
                  <!-- <div class="row">
                      <div class="col-md-2">
@@ -130,17 +130,6 @@
          </div> <!-- /#bio-->
 
 
-
-
-
-
-
-
-
-
-
-
-
              <div id="contact" class="hidden">
                  <div class="container">
                    <div class="text-center center-block" >
@@ -150,7 +139,6 @@
                        <li><a href="https://www.pinterest.com/vibrantlife14/" target="_blank"><i  class="fa fa-pinterest-square fa-4x"></i></a></li>
                        <li><a href="https://twitter.com/vibrantlife" target="_blank"><i class="fa fa-twitter-square fa-4x"></i></a></li>
                        <li><a href="http://linkedin.com/in/nicholeshelton" target="_blank"><i  class="fa fa-linkedin-square fa-4x"></i></a></li>
-                       <li><a href="https://plus.google.com/+NicholeSheltonsVibrantLife" target="_blank"><i class="fa fa-google-plus-square fa-4x"></i></a></li>
                        <li><a href="mailto:nicholesvibrantlife@gmail.com" target="_blank"><i class="fa fa-envelope-square fa-4x"></i></a></li>
                      </ul>
                    </div> <!-- text center block -->
@@ -158,90 +146,79 @@
              </div>
         </div> <!-- /bio header -->
     </div> <!-- /row -->
-  </div> <!-- /container -->
+
 
 
   <!-- Portfolio -->
-  <div class="page-section" id="portfolio"></div>
-    <h1>Portfolio</h1>
+  <div id="portfolio"></div>
 <!-- first row 2 items -->
-  <div class="container target portfolio">
+  <div class="container portfolio">
+    <div class="row"><h2>Portfolio</h2></div>
       <div class="row">
-       <div class="col-sm-6">
-          <div class="flip3D">
-            <div class="back">
-              <section class="backContent">
-                <div>
-                  <h4>A Web app that allows users to view crime data for higher institutions across the United States during 2011 - 2013.<p><a href="http://www.universitycrimewatch.com" target="_blank">UniversityCrimeWatch.com</a></p></h4>
-                </div>
-              </section>
-            </div>
-          <div class="front" id="university">
-            <section class="about">
-            </section>
-            <section class="turn">
-             <p>Turn me over for more Details</p>
-            </section>
+          <div class="col-md-4">
+              <div class="wrap">
+                  <div class="img">
+                      <img src='bootstrap/dist/imgs/universitywatch.png' />
+                      <div class="details">
+                        <h4>University Crime Watch</h4>
+                        <p> Web app that allows users to view crime data for higher institutions across the United States during 2011 - 2013.</p>
+                        <a href="http://www.universitycrimewatch.com" target="_blank">UniversityCrimeWatch.com</a>
+                      </div>
+
+                  </div>
+              </div>
           </div>
-      </div>
 
-    </div><!--/col-->
-       <div class="col-sm-6">
-          <div class="flip3D">
-            <div class="back">
-              <section class="backHeader"></section>
-              <section class="backContent"></section>
-              <section class="backContent">
-                <div>
-                  <h4>This rails app aims to create transparency between donors and relief centers in disaster areas and optimize logistics for resources needed after the earthquake that hit Nepal on April 25, 2015. The goal is to allow relief centers list their needs - along with the urgency of those needs -  and have donors claim those needs and find relief centers to donate to and discover what items are most needed.<p><a href="https://nepal-relief.herokuapp.com" target="_blank">SeeTheNeed.com</a></p></h4>
+          <div class="col-md-4">
+              <div class="wrap">
+                  <div class="img1">
+                      <!-- <img src='bootstrap/dist/imgs/pear-Hands.jpg' /> -->
+                      <div class="details">
+                        <h4>Pear Therapeutics</h4>
+                        <p> Responsible for the full front-end redesign of the homepage. I was provided with designs which I turned into interactive web.</p>
+                        <a href="http://pear.staging.wpengine.com/" target="_blank">PearTherapeutics.com</a>
+                      </div>
 
-                </div>
-              </section>
-            </div>
-          <div class="front" id="need">
-            <section class="about">
-              <h1>See The Need</h1>
-            </section>
-            <section class="turn">
-             <p>Turn me over for more Details</p>
-            </section>
+                  </div>
+              </div>
           </div>
-      </div>
+          <div class="col-md-4">
+              <div class="wrap">
+                  <div class="img2">
+                      <!-- <img src='bootstrap/dist/imgs/rsp-together.png' /> -->
+                      <div class="details">
+                        <h4>Resource Sharing Project</h4>
+                        <p> For this project, I was responsible for building the drupal cms, creating an interactive map, and for going from Photoshop mockup to function HTML.</p>
+                        <a href="http://rsp.huang.radicaldesigns.org/" target="_blank">ResourceSharingProject.org</a>
+                      </div>
 
-    </div><!--/col-->
+                  </div>
+              </div>
+          </div>
+
   </div><!--/row-->
 
+    </div><!--/ portfolio container-->
 
 
 
-
-
-
-
-</div><!--/ portfolio container-->
-
-
-  <div class="page-section" id="footer"></div>
 
 <!-- foooter with contact  -->
-<div class="container" id="footer">
-  <div class="text-center center-block">
+<!-- <div class="container" id="footer-container">
+  <div class="center-block">
     <a href="https://github.com/vibrantlife" target="_blank"><i id="social" class="fa fa-github-square fa-3x social-em"></i></a>
     <a href="https://www.pinterest.com/vibrantlife14/" target="_blank"><i id ="social" class="fa fa-pinterest-square fa-3x social-gp"></i></a>
     <a href="https://twitter.com/vibrantlife" target="_blank"><i id="social" class="fa fa-twitter-square fa-3x social-tw"></i></a>
     <a href="http://linkedin.com/in/nicholeshelton" target="_blank"><i id="social" class="fa fa-linkedin-square fa-3x social-tw"></i></a>
-    <a href="https://plus.google.com/+NicholeSheltonsVibrantLife" target="_blank"><i id="social" class="fa fa-google-plus-square fa-3x social-gp"></i></a>
     <a href="mailto:nicholesvibrantlife@gmail.com" target="_blank"><i id="social" class="fa fa-envelope-square fa-3x social-em"></i></a>
   </div>
-</div>
-</div> <!-- /wrap -->
-
+</div> -->
+</div> <!-- /wrapper -->
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="bootstrap/js/nav.js"></script>
 <script src="bootstrap/js/about.js"></script>
-<!-- skills chart  -->
 </body>
 </html>
