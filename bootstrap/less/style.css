@@ -6752,7 +6752,7 @@ ul.dropdown-menu {
   height: 100vh;
   width: 80%;
   padding: 0 20px;
-  margin: 100px 0;
+  margin: auto;
   position: relative;
   top: 70px;
 }
@@ -6792,7 +6792,7 @@ ul.dropdown-menu {
   height: 100vh;
 }
 .portfolio .row h2 {
-  margin: 60px 0;
+  margin: 100px 0 0 0;
   font-size: 120px;
 }
 .portfolio .col-md-4 {
@@ -7047,13 +7047,25 @@ ul.dropdown-menu {
 .social-em:hover {
   color: #f39c12;
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 768px) {
   .nav > li {
-    display: inline-block;
+    display: inline-block !important;
+  }
+  .navbar {
+    text-align: inherit !important;
   }
   .bio {
-    margin-bottom: 325px !important;
-    height: 1000px !important;
+    margin: 0 0 300px 20px!important;
+    height: 990px !important;
+    position: relative;
+  }
+  .bio-text {
+    font-size: 1.3em;
+  }
+  .bio-pic {
+    height: 300px !important;
+    width: 300px !important;
+    right: 30px !important;
   }
   .banner > header > h1 {
     font-size: 45px;
@@ -7062,5 +7074,8 @@ ul.dropdown-menu {
     margin: 0;
     position: relative;
     right: 11px;
+  }
+  .portfolio .row h2 {
+    font-size: 90px !important;
   }
 }

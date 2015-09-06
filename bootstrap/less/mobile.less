@@ -1,10 +1,25 @@
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 768px) {
     .nav > li {
-        display: inline-block;
+        display: inline-block !important;
+    }
+    .navbar {
+        text-align: inherit !important;
     }
     .bio {
-        margin-bottom: 325px !important;
-        height: 1000px !important;
+        margin: 0 0 300px 20px!important;
+        height: 990px !important;
+        position: relative;
+        // margin: none;
+    }
+
+    .bio-text {
+        font-size: 1.3em;
+    }
+
+    .bio-pic {
+        height: 300px !important;
+        width: 300px !important;
+        right: 30px !important;
     }
 
     .banner > header > h1 {
@@ -15,5 +30,9 @@
         margin: 0;
         position: relative;
         right: 11px;
+    }
+
+    .portfolio .row h2 {
+        font-size: 90px !important;
     }
 }
